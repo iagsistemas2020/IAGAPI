@@ -1,0 +1,267 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SisC.Api</name>
+    </assembly>
+    <members>
+        <member name="M:SisC.Api.Controllers.Cadastros.ClientesController.Get(System.Int32,System.Int32)">
+            <summary>
+            Listar dados da Classe Referenciada
+            </summary>
+            <param name="skip">Use o "Take" para retornar um número específico de elementos em uma sequência e ignorar o restante.</param>
+            <param name="take">Use "Skip" para ignorar um número específico de elementos em uma sequência e retornar o restante.</param>
+            <remarks></remarks>
+            <response code="200">OK - Retorna os dados solicitados</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:SisC.Api.Controllers.Cadastros.ClientesController.Endereco(SisC.Application.DTOs.Empresa.EnderecoDTO)">
+            <summary>
+            Cadastrar Endereços
+            </summary>
+            <remarks>Cada Cliente é uma "Pessoa" no Banco de dados. Informe id do Cliente em "PessoaId" para referenciar o registro ao mesmo</remarks>
+            <response code="200">OK - Retorna os dados solicitados</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:SisC.Api.Controllers.Cadastros.ClientesController.Contato(SisC.Application.DTOs.PessoaDTO.ContatoDTO)">
+            <summary>
+            Cadastrar contatos [Telefone, email...]
+            </summary>
+            <remarks>Caso não seja informado o campo "nome" o contato será referente a pessoa mesmo.]</remarks>
+            <remarks>Será inserido "EU" para contatos referentes a si mesmo</remarks>
+            <remarks>Cada Cliente é uma "Pessoa" no Banco de dados. Informe id do Cliente em "PessoaId" para referenciar o registro ao mesmo]</remarks>
+            <response code="200">OK - Retorna os dados solicitados</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:SisC.Api.Controllers.Cadastros.ClientesController.Get(System.Nullable{System.Guid})">
+            <summary>
+            Listar dados da Classe Referenciada
+            </summary>
+            <param name="id">Caso seja informado o Id a consulta retornará apenas um registro</param>
+            <remarks></remarks>
+            <response code="200">OK - Retorna os dados solicitados</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:SisC.Api.Controllers.Cadastros.ClientesController.AtualizarCliente(System.Guid,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{SisC.Application.DTOs.PessoaDTO.CliPropDTO})">
+             <summary>
+             Atualizar propriedades
+             </summary>
+             <remarks>
+             <para>replace - Substitui o valor de uma propriedade existente no documento JSON.</para>
+             <para>Exemplo: { "op": "replace", "path": "/propriedadeExistente", "value": "novoValor" }</para>
+            <para></para>
+             <para>Ex. Aplicação</para>
+            <para> </para>
+             
+             [
+               { "op": "replace", "path": "/nome", "value": "NOVO NOME" },
+               { "op": "replace", "path": "/limiteCredito", "value": 1000 }
+             ]
+            </remarks>
+             <response code="200">OK - Retorna o documento cadastrado</response>
+             <response code="400">Bad Request</response>
+             <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:SisC.Api.Controllers.Cadastros.FornecedoresController.Get(System.Int32,System.Int32)">
+            <summary>
+            Listar dados da Classe Referenciada
+            </summary>
+            <param name="skip">Use o "Take" para retornar um número específico de elementos em uma sequência e ignorar o restante.</param>
+            <param name="take">Use "Skip" para ignorar um número específico de elementos em uma sequência e retornar o restante.</param>
+            <remarks></remarks>
+            <response code="200">OK - Retorna os dados solicitados</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:SisC.Api.Controllers.Cadastros.FornecedoresController.Endereco(SisC.Application.DTOs.Empresa.EnderecoDTO)">
+            <summary>
+            Cadastrar Endereços
+            </summary>
+            <remarks>Cada Cliente é uma "Pessoa" no Banco de dados. Informe id do Cliente em "PessoaId" para referenciar o registro ao mesmo</remarks>
+            <response code="200">OK - Retorna os dados solicitados</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:SisC.Api.Controllers.Cadastros.FornecedoresController.Contato(SisC.Application.DTOs.PessoaDTO.ContatoDTO)">
+            <summary>
+            Cadastrar contatos [Telefone, email...]
+            </summary>
+            <remarks>Caso não seja informado o campo "nome" o contato será referente a pessoa mesmo.]</remarks>
+            <remarks>Será inserido "EU" para contatos referentes a si mesmo</remarks>
+            <remarks>Cada Cliente é uma "Pessoa" no Banco de dados. Informe id do Cliente em "PessoaId" para referenciar o registro ao mesmo]</remarks>
+            <response code="200">OK - Retorna os dados solicitados</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:SisC.Api.Controllers.Cadastros.FornecedoresController.Get(System.Nullable{System.Guid})">
+            <summary>
+            Listar dados da Classe Referenciada
+            </summary>
+            <param name="id">Caso seja informado o Id a consulta retornará apenas um registro</param>
+            <remarks></remarks>
+            <response code="200">OK - Retorna os dados solicitados</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:SisC.Api.Controllers.Cadastros.FornecedoresController.AtualizarCliente(System.Guid,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{SisC.Application.DTOs.PessoaDTO.CliPropDTO})">
+             <summary>
+             Atualizar propriedades
+             </summary>
+             <remarks>
+             <para>replace - Substitui o valor de uma propriedade existente no documento JSON.</para>
+             <para>Exemplo: { "op": "replace", "path": "/propriedadeExistente", "value": "novoValor" }</para>
+            <para></para>
+             <para>Ex. Aplicação</para>
+            <para> </para>
+             
+             [
+               { "op": "replace", "path": "/nome", "value": "NOVO NOME" },
+               { "op": "replace", "path": "/limiteCredito", "value": 1000 }
+             ]
+            </remarks>
+             <response code="200">OK - Retorna o documento cadastrado</response>
+             <response code="400">Bad Request</response>
+             <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:SisC.Api.Controllers.Fiscal.NFeController.StatusServico">
+            <summary>
+            Consulta a disponibilidade do Serviço de Emissão de Notas na SEFAZ
+            </summary>
+            <param name="xxx">Status Sefaz</param>
+            <returns>Status da SEFAZ</returns>
+            <response code="200">Status da SEFAZ</response>
+        </member>
+        <member name="M:SisC.Api.Controllers.Mercadorias.ProdutosController.Get(System.Int32,System.Int32)">
+            <summary>
+            Listar dados da Classe Referenciada
+            </summary>
+            <param name="skip">Use o "Take" para retornar um número específico de elementos em uma sequência e ignorar o restante.</param>
+            <param name="take">Use "Skip" para ignorar um número específico de elementos em uma sequência e retornar o restante.</param>
+            <remarks></remarks>
+            <response code="200">OK - Retorna os dados solicitados</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:SisC.Api.Controllers.Mercadorias.ProdutosController.Get(System.Nullable{System.Guid})">
+            <summary>
+            Listar dados da Classe Referenciada
+            </summary>
+            <param name="id">Caso seja informado o Id a consulta retornará apenas um registro</param>
+            <remarks></remarks>
+            <response code="200">OK - Retorna os dados solicitados</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:SisC.Api.Controllers.Mercadorias.ProdutosController.AtualizarProduto(System.Guid,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{SisC.Application.DTOs.Produto.ProdutoDTO})">
+             <summary>
+             Atualizar propriedades
+             </summary>
+             <remarks>
+             <para>replace - Substitui o valor de uma propriedade existente no documento JSON.</para>
+             <para>Exemplo: { "op": "replace", "path": "/propriedadeExistente", "value": "novoValor" }</para>
+            <para></para>
+             <para>Ex. Aplicação</para>
+            <para> </para>
+             
+             [
+               { "op": "replace", "path": "/nome", "value": "NOVO NOME" },
+               { "op": "replace", "path": "/Grade", "value": true }
+             ]
+            </remarks>
+             <response code="200">OK - Retorna o documento cadastrado</response>
+             <response code="400">Bad Request</response>
+             <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:SisC.Controllers.EmpresasController.GetEmpresas">
+            <summary>
+            Listar todas as empresas
+            </summary>
+            <response code="200">Filiais Cadastradas</response>
+        </member>
+        <member name="M:SisC.Controllers.EmpresasController.GetEmpresa(System.Guid)">
+            <summary>
+            Consulta uma a empresa a partir do seu identificador
+            </summary>
+        </member>
+        <member name="M:SisC.Controllers.EmpresasController.PutEmpresa(System.Guid,SisC.Application.DTOs.EmpresaDto)">
+            <summary>
+            Altera os dados de uma empresa específica
+            </summary>
+        </member>
+        <member name="M:SisC.Controllers.EmpresasController.RegistrarEmpresa(SisC.Application.ModelView.Filiais.NovaEmpresaViewModel)">
+            <summary>
+             Registra uma empresa de forma anônima (1º Registro do usuario)
+            </summary>
+        </member>
+        <member name="M:SisC.Controllers.EmpresasController.PostEmpresa(SisC.Application.ModelView.Filiais.NovaEmpresaViewModel)">
+            <summary>
+             Cria uma nova empresa
+            </summary>
+        </member>
+        <member name="M:SisC.Controllers.EmpresasController.DeleteEmpresa(System.Guid)">
+            <summary>
+             Exclui uma empresa especifica
+            </summary>
+        </member>
+        <member name="M:SisC.Controllers.Generic1Controller`3.Get(System.Int32,System.Int32)">
+            <summary>
+            Listar dados da Classe Referenciada
+            </summary>
+            <param name="skip">Use o "Take" para retornar um número específico de elementos em uma sequência e ignorar o restante.</param>
+            <param name="take">Use "Skip" para ignorar um número específico de elementos em uma sequência e retornar o restante.</param>
+            <remarks></remarks>
+            <response code="200">OK - Retorna os dados solicitados</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:SisC.Controllers.Generic1Controller`3.Get(System.Nullable{System.Guid})">
+            <summary>
+            Consulta uma entidade genérica pelo seu ID.
+            </summary>
+            <typeparam name="TEntity">O tipo da entidade genérica.</typeparam>
+            <param name="id">O ID da entidade a ser consultada.</param>
+            <returns>A entidade encontrada ou null caso não exista.</returns>
+        </member>
+        <member name="M:SisC.Controllers.Generic2Controller`1.Get(System.Int32,System.Int32)">
+            <summary>
+            Listar dados da Classe Referenciada
+            </summary>
+            <param name="skip">Use o "Take" para retornar um número específico de elementos em uma sequência e ignorar o restante.</param>
+            <param name="take">Use "Skip" para ignorar um número específico de elementos em uma sequência e retornar o restante.</param>
+            <remarks></remarks>
+            <response code="200">OK - Retorna os dados solicitados</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:SisC.Controllers.Generic2Controller`1.Get(System.Nullable{System.Guid})">
+            <summary>
+            Consulta uma entidade genérica pelo seu ID.
+            </summary>
+            <typeparam name="TEntity">O tipo da entidade genérica.</typeparam>
+            <param name="id">O ID da entidade a ser consultada.</param>
+            <returns>A entidade encontrada ou null caso não exista.</returns>
+        </member>
+        <member name="M:SisC.Controllers.GenericController`1.Get(System.Int32,System.Int32)">
+            <summary>
+            Listar dados da Classe Referenciada
+            </summary>
+            <param name="skip">Use o "Take" para retornar um número específico de elementos em uma sequência e ignorar o restante.</param>
+            <param name="take">Use "Skip" para ignorar um número específico de elementos em uma sequência e retornar o restante.</param>
+            <remarks></remarks>
+            <response code="200">OK - Retorna os dados solicitados</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:SisC.Controllers.GenericController`1.Get(System.Nullable{System.Guid})">
+            <summary>
+            Consulta uma entidade genérica pelo seu ID.
+            </summary>
+            <typeparam name="TEntity">O tipo da entidade genérica.</typeparam>
+            <param name="id">O ID da entidade a ser consultada.</param>
+            <returns>A entidade encontrada ou null caso não exista.</returns>
+        </member>
+    </members>
+</doc>
