@@ -15,7 +15,7 @@
             <response code="400">Bad Request</response>
             <response code="500">Internal Server Error</response>
         </member>
-        <member name="M:SisC.Api.Controllers.Cadastros.ClientesController.Endereco(SisC.Application.DTOs.Empresa.EnderecoDTO)">
+        <member name="M:SisC.Api.Controllers.Cadastros.ClientesController.Endereco(SisC.Application.DTOs.PessoaDTO.EnderecoClienteDTOe)">
             <summary>
             Cadastrar Endereços
             </summary>
@@ -76,7 +76,7 @@
             <response code="400">Bad Request</response>
             <response code="500">Internal Server Error</response>
         </member>
-        <member name="M:SisC.Api.Controllers.Cadastros.FornecedoresController.Endereco(SisC.Application.DTOs.Empresa.EnderecoDTO)">
+        <member name="M:SisC.Api.Controllers.Cadastros.FornecedoresController.Endereco(SisC.Application.DTOs.PessoaDTO.EnderecoFornecedorDTOe)">
             <summary>
             Cadastrar Endereços
             </summary>
@@ -155,7 +155,7 @@
             <response code="400">Bad Request</response>
             <response code="500">Internal Server Error</response>
         </member>
-        <member name="M:SisC.Api.Controllers.Mercadorias.ProdutosController.AtualizarProduto(System.Guid,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{SisC.Application.DTOs.Produto.ProdutoDTO})">
+        <member name="M:SisC.Api.Controllers.Mercadorias.ProdutosController.AtualizarProduto(System.Guid,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{SisC.Application.DTOs.Produto.ProdutoDTOe})">
              <summary>
              Atualizar propriedades
              </summary>
@@ -186,17 +186,17 @@
             Consulta uma a empresa a partir do seu identificador
             </summary>
         </member>
-        <member name="M:SisC.Controllers.EmpresasController.PutEmpresa(System.Guid,SisC.Application.DTOs.EmpresaDto)">
+        <member name="M:SisC.Controllers.EmpresasController.PutEmpresa(System.Guid,SisC.Application.DTOs.Empresa.EmpresaDTO)">
             <summary>
             Altera os dados de uma empresa específica
             </summary>
         </member>
-        <member name="M:SisC.Controllers.EmpresasController.RegistrarEmpresa(SisC.Application.ModelView.Filiais.NovaEmpresaViewModel)">
+        <member name="M:SisC.Controllers.EmpresasController.RegistrarEmpresa(SisC.Application.DTOs.Empresa.EmpresaDTOe)">
             <summary>
              Registra uma empresa de forma anônima (1º Registro do usuario)
             </summary>
         </member>
-        <member name="M:SisC.Controllers.EmpresasController.PostEmpresa(SisC.Application.ModelView.Filiais.NovaEmpresaViewModel)">
+        <member name="M:SisC.Controllers.EmpresasController.PostEmpresa(SisC.Application.DTOs.Empresa.EmpresaDTOe)">
             <summary>
              Cria uma nova empresa
             </summary>
