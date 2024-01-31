@@ -207,7 +207,7 @@
              Registra uma empresa de forma anônima (1º Registro do usuario)
             </summary>
         </member>
-        <member name="M:SisC.Controllers.EmpresasController.PostEmpresa(SisC.Application.DTOs.Empresa.EmpresaDTOe)">
+        <member name="M:SisC.Controllers.EmpresasController.PostFilial(SisC.Application.DTOs.Empresa.FilialDTOe)">
             <summary>
              Cria uma nova empresa
             </summary>
