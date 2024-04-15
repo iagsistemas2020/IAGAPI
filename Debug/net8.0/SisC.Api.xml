@@ -19,7 +19,10 @@
             <summary>
             Cadastrar Endereços
             </summary>
-            <remarks>Cada Cliente é uma "Pessoa" no Banco de dados. Informe id do Cliente em "PessoaId" para referenciar o registro ao mesmo</remarks>
+            <remarks>
+            Cada Cliente é uma "Pessoa" no Banco de dados. Informe id do Cliente em "PessoaId" para referenciar o registro ao mesmo.
+            Ao informar Id o registro estará em modo de edição. Para incluir, não informe o Id.
+            </remarks>
             <response code="200">OK - Retorna os dados solicitados</response>
             <response code="400">Bad Request</response>
             <response code="500">Internal Server Error</response>
@@ -145,6 +148,14 @@
             <returns>Status da SEFAZ</returns>
             <response code="200">Status da SEFAZ</response>
         </member>
+        <member name="M:SisC.Api.Controllers.Fiscal.NFeController.ConfigurarNFe(SisC.Application.ModelView.NFe.ConfigNFeViewModel)">
+            <summary>
+            Configura o Serviço de Emissão de Notas na SEFAZ
+            </summary>
+            <param >Status Sefaz</param>
+            <returns>Status da SEFAZ</returns>
+            <response code="200">Status da SEFAZ</response>
+        </member>
         <member name="M:SisC.Api.Controllers.Mercadorias.ProdutosController.Get(System.Int32,System.Int32)">
             <summary>
             Listar dados da Classe Referenciada
@@ -185,6 +196,37 @@
              <response code="200">OK - Retorna o documento cadastrado</response>
              <response code="400">Bad Request</response>
              <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:SisC.Controllers.AdministracaoController.GetEmpresas">
+            <summary>
+            Listar todas as empresas
+            </summary>
+            <response code="200">Filiais Cadastradas</response>
+        </member>
+        <member name="M:SisC.Controllers.AdministracaoController.GetEmpresa(System.Guid)">
+            <summary>
+            Consulta uma a empresa a partir do seu identificador
+            </summary>
+        </member>
+        <member name="M:SisC.Controllers.AdministracaoController.PutEmpresa(System.Guid,SisC.Application.DTOs.Empresa.EmpresaDTO)">
+            <summary>
+            Altera os dados de uma empresa específica
+            </summary>
+        </member>
+        <member name="M:SisC.Controllers.AdministracaoController.RegistrarEmpresa(SisC.Application.DTOs.Empresa.EmpresaDTOe)">
+            <summary>
+             Registra uma empresa de forma anônima (1º Registro do usuario)
+            </summary>
+        </member>
+        <member name="M:SisC.Controllers.AdministracaoController.PostFilial(SisC.Application.DTOs.Empresa.FilialDTOe)">
+            <summary>
+             Cria uma nova empresa
+            </summary>
+        </member>
+        <member name="M:SisC.Controllers.AdministracaoController.DeleteEmpresa(System.Guid)">
+            <summary>
+             Exclui uma empresa especifica
+            </summary>
         </member>
         <member name="M:SisC.Controllers.EmpresasController.GetEmpresas">
             <summary>
@@ -266,13 +308,16 @@
             <response code="400">Bad Request</response>
             <response code="500">Internal Server Error</response>
         </member>
-        <member name="M:SisC.Controllers.GenericController`1.Get(System.Nullable{System.Guid})">
-            <summary>
-            Consulta uma entidade genérica pelo seu ID.
-            </summary>
-            <typeparam name="TEntity">O tipo da entidade genérica.</typeparam>
-            <param name="id">O ID da entidade a ser consultada.</param>
-            <returns>A entidade encontrada ou null caso não exista.</returns>
+        <member name="M:SisC.Controllers.GenericController`1.Get">
+             <summary>
+             Listar dados da Classe Referenciada Usando OData
+             </summary>
+             <remarks>
+            $select;  $expand;  $orderby;  $top;  $skip;  $count;  $search;  $format;  $filter;  $inlinecount;
+            </remarks>
+             <response code="200">OK - Retorna os dados solicitados</response>
+             <response code="400">Bad Request</response>
+             <response code="500">Internal Server Error</response>
         </member>
     </members>
 </doc>
