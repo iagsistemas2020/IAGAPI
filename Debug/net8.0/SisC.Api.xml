@@ -167,6 +167,17 @@
             <response code="400">Bad Request</response>
             <response code="500">Internal Server Error</response>
         </member>
+        <member name="M:SisC.Api.Controllers.Mercadorias.ProdutosController.GetPDV(System.Int32,System.Int32)">
+            <summary>
+            Listar dados da Classe Referenciada
+            </summary>
+            <param name="skip">Use o "Take" para retornar um número específico de elementos em uma sequência e ignorar o restante.</param>
+            <param name="take">Use "Skip" para ignorar um número específico de elementos em uma sequência e retornar o restante.</param>
+            <remarks></remarks>
+            <response code="200">OK - Retorna os dados solicitados</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
         <member name="M:SisC.Api.Controllers.Mercadorias.ProdutosController.Get(System.Nullable{System.Guid})">
             <summary>
             Listar dados da Classe Referenciada
@@ -197,37 +208,6 @@
              <response code="400">Bad Request</response>
              <response code="500">Internal Server Error</response>
         </member>
-        <member name="M:SisC.Controllers.AdministracaoController.GetEmpresas">
-            <summary>
-            Listar todas as empresas
-            </summary>
-            <response code="200">Filiais Cadastradas</response>
-        </member>
-        <member name="M:SisC.Controllers.AdministracaoController.GetEmpresa(System.Guid)">
-            <summary>
-            Consulta uma a empresa a partir do seu identificador
-            </summary>
-        </member>
-        <member name="M:SisC.Controllers.AdministracaoController.PutEmpresa(System.Guid,SisC.Application.DTOs.Empresa.EmpresaDTO)">
-            <summary>
-            Altera os dados de uma empresa específica
-            </summary>
-        </member>
-        <member name="M:SisC.Controllers.AdministracaoController.RegistrarEmpresa(SisC.Application.DTOs.Empresa.EmpresaDTOe)">
-            <summary>
-             Registra uma empresa de forma anônima (1º Registro do usuario)
-            </summary>
-        </member>
-        <member name="M:SisC.Controllers.AdministracaoController.PostFilial(SisC.Application.DTOs.Empresa.FilialDTOe)">
-            <summary>
-             Cria uma nova empresa
-            </summary>
-        </member>
-        <member name="M:SisC.Controllers.AdministracaoController.DeleteEmpresa(System.Guid)">
-            <summary>
-             Exclui uma empresa especifica
-            </summary>
-        </member>
         <member name="M:SisC.Controllers.EmpresasController.GetEmpresas">
             <summary>
             Listar todas as empresas
@@ -235,6 +215,11 @@
             <response code="200">Filiais Cadastradas</response>
         </member>
         <member name="M:SisC.Controllers.EmpresasController.GetEmpresa(System.Guid)">
+            <summary>
+            Consulta uma a empresa a partir do seu identificador
+            </summary>
+        </member>
+        <member name="M:SisC.Controllers.EmpresasController.GetFiliais(System.Guid)">
             <summary>
             Consulta uma a empresa a partir do seu identificador
             </summary>
@@ -318,6 +303,37 @@
              <response code="200">OK - Retorna os dados solicitados</response>
              <response code="400">Bad Request</response>
              <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:SisC.Controllers.GerencialController.GetEmpresas">
+            <summary>
+            Listar todas as empresas
+            </summary>
+            <response code="200">Filiais Cadastradas</response>
+        </member>
+        <member name="M:SisC.Controllers.GerencialController.GetEmpresa(System.Guid)">
+            <summary>
+            Consulta uma a empresa a partir do seu identificador
+            </summary>
+        </member>
+        <member name="M:SisC.Controllers.GerencialController.PutEmpresa(System.Guid,SisC.Application.DTOs.Empresa.EmpresaDTO)">
+            <summary>
+            Altera os dados de uma empresa específica
+            </summary>
+        </member>
+        <member name="M:SisC.Controllers.GerencialController.RegistrarEmpresa(SisC.Application.DTOs.Empresa.EmpresaDTOe)">
+            <summary>
+             Registra uma empresa de forma anônima (1º Registro do usuario)
+            </summary>
+        </member>
+        <member name="M:SisC.Controllers.GerencialController.PostFilial(SisC.Application.DTOs.Empresa.FilialDTOe)">
+            <summary>
+             Cria uma nova empresa
+            </summary>
+        </member>
+        <member name="M:SisC.Controllers.GerencialController.DeleteEmpresa(System.Guid)">
+            <summary>
+             Exclui uma empresa especifica
+            </summary>
         </member>
     </members>
 </doc>
